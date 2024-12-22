@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage de Fred et Nana le 03 Mai 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fred et Nana</h1>
+        <h2>Mariage le 03 Mai 2025</h2>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#deroulement">Déroulement</a></li>
+                <li><a href="#hebergement">Hébergements</a></li>
+                <li><a href="#repondez">Répondez à votre invitation</a></li>
+             <!--   <li><a href="#plan-acces">Plan d'accès</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil">
+        <h2>Accueil</h2>
+        <p>Bienvenue sur notre site web de mariage !</p>
+        <p>Nous sommes ravis de vous inviter à notre mariage le 03 Mai 2025.</p>
+        <p></p>
+        <p>Nous avons trouvé un super endroit pour accueillir la fiesta!</p>
+        <p>Pour nous permettre d'organiser au mieux cet évènemment pouvez-vous</p>
+        <p>prendre connaissance du <a href="#deroulement" id="deroulement-link">déroulement </a>ainsi que des options pour les <a href="#hebergement" id="hebergement-link">hébergements</a> </p>
+        <p>Puis vous rendre à la section <a href="#repondez" id="invitation-link">répondez à votre invitation</a> et fournir les informations demandées? </p>
+        
+        <br>
+        <h3>Compte à rebours jusqu'au mariage</h3>
+        <h2><div id="countdown"></div></h2>
+        
+    </section>
+
+    <section id="deroulement">
+        <h2>Déroulement</h2>
+        <h3>Samedi 3 mai 2025, Le Carrousel de Baronville, Béville-le-Comte, Eure-et-Loir</h3>
+        <p>Accueil des participants : 14h </p>
+        <p>Cérémonie Laique </p>
+        <p>Vin d'honneur </p>
+        <p>Diner</p>
+        <p>Soirée festive jusqu'au bout de la nuit !</p>
+        <p>Venez avec votre plus beau sourire, vos chaussures de danse, votre tenue flamboyante, votre plus belle voix et votre bonne humeur !</p>
+        <p>Nuit plus ou moins courte - voir la section <a href="#hebergement" id="hebergement-link2">hébergement</a> </p>
+        <h3>Dimanche 4 mai 2025, Le Carrousel de Baronville</h3>
+        <p>Ouverture dès 8h</p>
+        <p>Brunch à partir de 11h </p>
+        <p>Fin de la fête vers 16h </p>
+        <br>
+        <p>Ce planning est susceptible de changer nous vous tiendrons au courant</p>
+    </section>
+
+    <section id="repondez">
+        <h2>Répondez à votre invitation</h2>
+
+        <form id="invitation-form" enctype="text/plain;charset=utf-8">        
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            <br>
+    
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+            <br>
+            <p>Je participe au mariage </p>
+            <!-- Ajout du champ de basculement "Je participe au mariage" -->
+            <div class="slide-toggle-container">
+            <div class="slide-toggle" id="participate-toggle" onclick="toggleSlide()">
+                <span>Non</span>
+                <div class="slider"></div>
+                <span>Oui</span>
+            </div>
+            </div>
+    
+            <br>
+            
+            <!-- Example div for initially hidden fields -->
+            <div id="additionalFields" style="display: none;">
+            <!-- Additional form fields go here -->
+                <!-- Ajoutez le champ "Type de repas" dans la section "Répondez à votre invitation" -->
+                <!--    <label for="type-repas">Type de repas :</label>
+                    <select id="type-repas" name="type-repas">
+                        <option value="tout">Tout</option>
+                        <option value="hallal">Hallal</option>
+                        <option value="cashr">Casher</option>
+                        <option value="vegi">Végétarien</option>
+                    </select>
+                    <br>-->
+                    <div id="brunches">
+                        <h3>Participation au brunch du dimanche :</h3>
+                        <input type="radio" id="brunchYes" name="brunch" value="Oui" checked>
+                        <label for="brunchYes">Oui</label>
+                        <input type="radio" id="brunchNo" name="brunch" value="Non">
+                        <label for="brunchNo">Non</label>
+                    </div>
+
+                    <div id="type-couchage">
+                        <h3>Type de couchage :</h3>
+                        <input type="radio" id="chambre" name="couchage" value="En chambre sur le domaine" checked>
+                        <label for="chambre">En chambre sur le domaine (selon dispo - voir section hébergements)</label>
+                        <input type="radio" id="tente" name="couchage" value="En tente sur le domaine">
+                        <label for="tente">En tente sur le domaine</label>
+                        <input type="radio" id="autre" name="couchage" value="Autre">
+                        <label for="autre">Autre</label>
+                    </div>
+                    <label style="font-family: 'Cursive', cursive, Arial, sans-serif; font-size: 1.2rem; margin-bottom: 10px; color: #000;" for="nombre-participants">Nombre de participants :</label>
+                <p>Afin de nous permettre de profiter pleinement de cette journée spéciale dans une atmosphère détendue et sans soucis, nous vous prions de bien vouloir considérer la possibilité de venir sans enfant. Nous vous remercions sincèrement pour votre compréhension et votre soutien dans cette décision qui contribuera à rendre notre journée encore plus mémorable pour tous.</p>
+                    <select id="nombre-participants" name="nombre-participants">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <br>
+                    <div id="ages-participants">
+                        <!-- Les tranches d'âge des participants seront ajoutées dynamiquement ici en JavaScript -->
+                </div>
+                <br>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                <br>
+            </div>
+            
+            <button id="submit-button" type="button">Envoyer</button>
+        </form>
+
+        <div id="confirmation-message" style="display: none;">
+            <p>Merci, vos réponses ont bien été enregistrées.</p>
+        </div>
+
+        
+    </section>
+
+    <section id="plan-acces">
+        <h2>Plan d'accès</h2>
+       <!-- <label for="point-de-depart">Point de départ :</label>
+        <input type="text" id="point-de-depart" name="point-de-depart">
+        <button id="go-button" type="button">Go</button>
+        <div id="map"></div>-->
+        <p>Informations bientôt disponibles.</p>
+    </section>
+
+    <section id="hebergement">
+        <h2>Hébergement</h2>
+        <h3>En chambre sur le domaine.</h3>
+        <p>Le domaine propose 9 chambres doubles. Elles sont au prix de 110€/nuit.</p>
+        <p>Le plan suivant est à l'échelle, il est possible de mettre des matelats dans certaines d'entre elles.</p>
+        <img id="planChambre" src="/5 - Plan chambres chatelet Carrousel.png" alt="Plan des chambre">
+        <h3>En tente sur le domaine.</h3>
+        <p>Derière les chambres se trouve un pelouse sur laquelle des tentes peuvent être montées.</p>
+        <p>Il n'y a pas de charges associées à la pose de tentes.</p>
+        <h3>Autres.</h3>
+        <h4>Taxis</h4>
+        <p>Sontag chartres 0650111777</p> 
+        <p>Romain Auneau Taxi 06 79 04 52 40</p>
+        <p>Fabien Marlat 0237259573 / 0603150297 taxifabienmarlat@hotmail.fr</p>
+        <h4>Hébergements à proximité</h4>
+        <div class="hebergement">
+            <h4>Julie Dupuis (3 min, 2km, 4 personnes)</h4>
+            <p>Téléphone : <a href="tel:0615035538">06.15.03.55.38</a></p>
+            <p>Email : <a href="mailto:julie.dupuis125@gmail.com">julie.dupuis125@gmail.com</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Le Moulin de Poissac (4 min, 2.5 km, 4 personnes)</h4>
+            <p>Drulhe Renée, 2 Rue des Prés Poissac, 28700 Oinville</p>
+            <p>Téléphone : <a href="tel:0237317196">02 37 31 71 96</a></p>
+            <p>Email : <a href="mailto:renee.drulhe@orange.fr">renee.drulhe@orange.fr</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Les chalets du bois blanc (7 min, 4.2km, 14 personnes)</h4>
+            <p><a href="https://leschaletsduboisblanc.fr/">Site Web</a></p>
+            <p>Téléphone : <a href="tel:0619066946">06 19 06 69 46</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Le camp d’auneau (9 min, 6km, 4 à 20 personnes)</h4>
+            <p><a href="https://hebergement-lecampdauneau.com/">Site Web</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Gîte Le Génerville (11 min, 10.1 km, 6 personnes)</h4>
+            <p>6 ter rue de la fontaine, 28630 - Sours</p>
+            <p>Téléphone : <a href="tel:0237840101">02 37 84 01 01</a></p>
+            <p>Fax : <a href="fax:0237214799">02 37 21 47 99</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Chambre d'hôtes Florette (13 min, 10.3 km, 5 personnes)</h4>
+            <p>Marie-Isabelle Astruc, 5, rue Noguette, Gourville, 78660 - Prunay en Yvelines</p>
+            <p>Téléphone : <a href="tel:0130590129">01 30 59 01 29</a></p>
+            <p>Mobile : <a href="tel:0633207688">06 33 20 76 88</a></p>
+            <p>Email : <a href="mailto:contact@florette-gourville.net">contact@florette-gourville.net</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Chambres d'hôtes Manoir du Pont (13 min, 12.2 km, 15 personnes)</h4>
+            <p>4, avenue de la Gare - Pont sous Gallardon, 28320 Bailleau Armenonville</p>
+            <p>Téléphone : <a href="tel:0684890784">06 84 89 07 84</a> ou <a href="tel:0667987916">06 67 98 79 16</a></p>
+            <p>Email : <a href="mailto:manoirdupont@gmail.com">manoirdupont@gmail.com</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Au bonheur des retrouvailles "Gîte des mûres" (14 min, 13 km, 4 personnes)</h4>
+            <p>8 rue Simon Perrot, 28700 - Denonville</p>
+            <p>Téléphone : <a href="tel:0143911313">01 43 91 13 13</a> ou <a href="tel:0644107365">06 44 10 73 65</a></p>
+            <p><a href="http://www.aubonheurdesretrouvailles.fr/">Site Web</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Le gite de Bleury (15 min, 9.9 km, 11 personnes)</h4>
+            <p>17 rue du Four à Chaux - Bonville, 28700 BLEURY</p>
+            <p>Téléphone : <a href="tel:0237318294">02 37 31 82 94</a> ou <a href="tel:0665741333">06 65 74 13 33</a></p>
+            <p><a href="http://www.gitedebleury.com">Site Web</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Gîte la Billotière (15 min, 12.6 km, 10 personnes)</h4>
+            <p>Corine et Pascal Bidou, 49 rue Pierre Trouvé, 78660 Ablis</p>
+            <p>Téléphone : <a href="tel:0130591907">01 30 59 19 07</a> ou <a href="tel:0676770999">06 76 77 09 99</a></p>
+            <p>Email : <a href="mailto:Gite-ablis@orange.fr">Gite-ablis@orange.fr</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>L’ecale en Beauce (15 min, 13 km), 7 personnes</h4>
+            <p>52 grande rue, 28700 MAISONS</p>
+            <p>Téléphone : <a href="tel:0687925755">06 87 92 57 55</a></p>
+            <p>Email : <a href="mailto:lescale-en-beauce@orange.fr">lescale-en-beauce@orange.fr</a></p>
+            <p><a href="https://www.lescaleenbeauce.com/">Site Web</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Chambre d’hôte ; le clos de la Boissière (15 min, 13.6 km)</h4>
+            <p>Mme LE MAREC Emilie, 1 rue de la Boissière, 28700 Nogent le Phaye</p>
+            <p>Téléphone : <a href="tel:0633538241">06 33 53 82 41</a></p>
+            <p>Email : <a href="mailto:leclosdelaboissiere28@orange.fr">leclosdelaboissiere28@orange.fr</a></p>
+            <p><a href="https://www.chambres-hotes.fr/74727">Site Web</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>B&B Hôtel Chartres Océane (17 min, 17.5 km)</h4>
+            <p>6 Rue Blaise Pascal, 28000 Chartres</p>
+            <p><a href="https://www.hotel-bb.com">Site Web</a></p>
+            <p>Téléphone : <a href="tel:0890649740">0 890 64 97 40</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Hôtel Campanile Chartres (17 min, 17.5 km)</h4>
+            <p>1 Allée Prométhée, 28000 Chartres</p>
+            <p><a href="https://www.campanile-chartres.com">Site Web</a></p>
+            <p>Téléphone : <a href="tel:0237907600">02 37 90 76 00</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Hôtel Novotel Chartres (17 min, 18 km)</h4>
+            <p>5 ter Avenue Marcel Proust, 28000 Chartres</p>
+            <p><a href="https://www.accorhotels.com">Site Web</a></p>
+            <p>Téléphone : <a href="tel:0237881350">02 37 88 13 50</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Ptitdej-hotel Chartres (18 min, 18 km)</h4>
+            <p>3 Avenue Marcel Proust, 28000 Chartres</p>
+            <p><a href="https://www.ptitdejhotel-chartres.com">Site Web</a></p>
+            <p>Téléphone : <a href="tel:0237347474">02 37 34 74 74</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Hôtel Kyriad Chartres (19 min, 19 km)</h4>
+            <p>24 Avenue Gustave Eiffel, 28000 Chartres</p>
+            <p><a href="https://www.kyriad-chartres.com">Site Web</a></p>
+            <p>Téléphone : <a href="tel:0237259797">02 37 25 97 97</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Gîte La Gerbière (20 min, 19.8 km, 5 personnes)</h4>
+            <p>34 Rue de Chartres, 28310 Gouillons</p>
+            <p>Téléphone : <a href="tel:0688602511">06 88 60 25 11</a></p>
+            <p><a href="http://gitelagerbiere.wixsite.com/gouillons">Site Web</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Les Semailles (21 min, 17.2 km, 6 personnes)</h4>
+            <p>9 Place Fleurie, 28150 Boisville-la-Saint-Père</p>
+            <p>Email : <a href="mailto:resa@gitelessemailles.fr">resa@gitelessemailles.fr</a></p>
+            <p><a href="https://www.gitelessemailles.fr/">Site Web</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Hôtel Ibis Rambouillet (22 min, 24.4 km)</h4>
+            <p>2 Rue Pierre Métairie, 78120 Rambouillet</p>
+            <p><a href="https://www.accorhotels.com">Site Web</a></p>
+            <p>Téléphone : <a href="tel:0130417850">01 30 41 78 50</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Maison Paulette (23 min, 22 km)</h4>
+            <p>9 Grande Rue, 91410 Chatignonville</p>
+            <p>Téléphone : <a href="tel:0682616974">06 82 61 69 74</a></p>
+            <p>Email : <a href="mailto:contact@maison-paulette.fr">contact@maison-paulette.fr</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Le Relais d'Oc (24 min, 25.2 km)</h4>
+            <p>3, rue de la Revanche, 28310 BAUDREVILLE</p>
+            <p>Téléphone : <a href="tel:0610734339">06 10 73 43 39</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Le Gîte de la Tuilerie (25 min, 24.4 km)</h4>
+            <p>2 Rue de la Tuilerie, 28700 Ardelu</p>
+            <p>Téléphone : <a href="tel:0617636834">06 17 63 68 34</a></p>
+            <p>Email : <a href="mailto:gitedelatuilerie@yahoo.fr">gitedelatuilerie@yahoo.fr</a></p>
+            <p><a href="https://gitedelatuilerie.wixsite.com/beauce">Site Web</a></p>
+        </div>
+    
+        <div class="hebergement">
+            <h4>Hôtel Mercure Rambouillet Relays du Château (31 min, 29 km)</h4>
+            <p>1 Place de la Libération, 78120 Rambouillet</p>
+            <p><a href="https://www.accorhotels.com">Site Web</a></p>
+            <p>Téléphone : <a href="tel:0134573000">01 34 57 30 00</a></p>
+        </div>
+
+        <!-- Informations sur l'hébergement ici -->
+    </section>
+
+    <section id="message">
+        <h2>Message</h2>
+        <form id="message-form">
+            <!-- Formulaire pour envoyer un message ici -->
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Frédéric Mathé 0619379553 frederic.mathe@gmail.com</p>
+        <p>Nana Touré 0668252420 nanatoure088@gmail.com</p>
+    </section>
+
+    <footer>
+        <!-- Pied de page ici -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* Réinitialisation des marges et des rembourrages */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fond et couleurs de base */
+body {
+    font-family: 'Dancing Script', cursive, Arial, sans-serif;
+    background-color: #fff; /* Fond blanc */
+    color: #000; /* Texte noir */
+    background-image: url('espace-copie-bague-mariage-fleurs.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* En-tête */
+header {
+    background-color: rgba(255, 255, 255, 0.4); /* Fond blanc */
+    color: #000; /* Texte noir */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Cursive', cursive, Arial, sans-serif;
+    font-size: 2rem;
+    color: #000; /* Texte noir */
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000; /* Texte noir */
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a5d46f;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.4); /* Fond blanc */
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centrage du texte dans toutes les sections */
+}
+
+h2 {
+    font-family: 'Cursive', cursive, Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000; /* Texte noir */
+}
+
+h3 {
+    font-family: 'Cursive', cursive, Arial, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000; /* Texte noir */
+}
+
+h4 {
+    font-family: 'Cursive', cursive, Arial, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #000; /* Texte noir */
+}
+
+/* Pied de page */
+footer {
+    background-color: rgba(255, 255, 255, 0.4); /* Fond blanc */
+    color: #000; /* Texte noir */
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Classe pour masquer les sections */
+.hidden {
+    display: none;
+}
+
+/* Styles pour centrer le texte dans la section "Accueil" */
+#accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#accueil h2,
+#accueil p,
+#countdown {
+    color: #000; /* Texte noir */
+    margin: 10px;
+}
+
+/* Styles pour centrer le texte et aligner horizontalement les éléments du formulaire */
+#repondez label,
+#repondez select,
+#repondez input[type="text"] {
+    display: inline-block; /* Les éléments du formulaire sont sur la même ligne */
+    vertical-align: middle; /* Alignement vertical au milieu */
+    margin: 10px; /* Espacement entre les éléments */
+    text-align: left; /* Alignement horizontal à gauche */
+}
+
+#confirmation-message {
+    display: none; /* Masquer par défaut */
+    color: #000; /* Couleur du texte pour le message de confirmation */
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.slide-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  /*  height: 100vh;*/
+  }
+  
+  .slide-toggle {
+    width: 150px;
+    height: 30px;
+    background-color: rgba(204, 204, 204, 0.2);
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  span {
+    flex: 1;
+    text-align: center;
+    user-select: none;
+    color: #666;
+  }
+  
+  .slider {
+    width: 75px;
+    height: 30px;
+    background-color: rgba(52, 152, 219, 0.2);
+    position: absolute;
+    transition: 0.4s;
+  }
+  
+  .slide-active {
+    background-color: rgba(52, 152, 219, 0.2);
+    transform: translateX(75px);
+  }
+
+  #type-couchage input[type="radio"],
+  #type-couchage label {
+      display: inline-block;
+      margin-right: 10px;
+  }
+
+  #planChambre {
+      width: 50%;
+  }
